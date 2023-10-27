@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    .header {
+      background: purple;
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+      color: white;
+    }
+
+    .name p {
+      margin-bottom: 0; /* This removes the space after each line */
+    }
+
+    .tabs {
+      display: flex;
+      gap: 20px;
+    }
+
+    .tabs a {
+      color: white; /* This changes the text color to white */
+      text-decoration: none;
+    }
+
+    .tabs a:hover {
+      font-weight: bold; /* This makes the text bold when hovered */
+      text-decoration: underline; /* This adds an underline when hovered */
+    }
+
+    .content {
+      display: flex; /* This makes the image and text align side by side */
+      gap: 20px; /* This adds some gap between the image and text */
+      padding: 20px;
+      font-size: 18px;
+    }
+
+    h2{
+        color: purple;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .skill-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* This adds a shadow effect */
+  }
+  .projects {
+        padding: 20px;
+        font-size: 18px;
+    }
+    .project-card {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    .Recommendations
+    {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(200px, 1fr));
+        gap: 25px;
+        padding: 20px;
+    }
+    .Recommendations-card
+    {
+        border: 1px solid #ddd;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0); /* This adds a shadow effect */
+    }
+    #back-to-top-btn {
+        display:none; 
+        position:fixed; 
+        bottom:30px; 
+        right:30px; 
+        outline:none; 
+        border: solid black; 
+        background-color: purple; 
+        cursor:pointer; 
+        padding:10px; 
+        border-radius:50%;
+    }
+    .arrow-button {
+    background-color: #3498db; /* Set the button background color */
+    color: #fff; /* Set the text (arrow) color */
+    border: none;
+    padding: 10px 20px;
+    font-size: 34px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.arrow-button span {
+    vertical-align: middle;
+    margin-left: 5px; /* Adjust the spacing between the arrow and button text */
+}
+.modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .modal-content {
+      background-color: pink;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 300px;
+    }
+
+    .ok-button {
+      color: #aaa;
+      text-align: center;
+      font-size: 28px;
+      display: block;
+      margin: 0 auto;
+      width: 100px;
+    }
+
+    .ok-button:hover,
+    .ok-button:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="name">
+    <h1>Ganta Pranav Reddy</h1>
+    <p><i class="fa fa-envelope"></i> gantapranavreddy@gmail.com</p>
+    <p><i class="fa fa-phone"></i> 7981393469</p>
+  </div>
+
+  <div class="tabs">
+    <a href="#">About Me</a>
+    <a href="#">Skills</a>
+    <a href="#">Projects</a>
+    <a href="#">Recommendations</a>
+  </div>
+</div>
+
+<div class="content">
+  <img src="https://th.bing.com/th/id/OIP.QeKeC2YhkLIHIME1DyinWAHaHz?w=187&h=196&c=7&r=0&o=5&dpr=1.3&pid=1.7">
+  
+  <div>
+    <h2>Hi, I'm Ganta Pranav Reddy!</h2>
+    <p>I am a B-tech CSE  2nd year student studying at SR University Warangal ,INDIA.I am good at coding in c language , python.The development field i worked in is web development. I know popular languages like html,css, javascript.</p>
+  </div>
+</div>
+<hr style="color: 2px solid black;">
+<div class="skills-grid">
+    <div class="skill-card">
+        <h3>HTML</h3>
+        <img src="https://th.bing.com/th/id/OIP.Q82hIHxNKTr9wI17ywJkXQHaEK?w=353&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" style="width: 32px; height: 32px; display: block; margin: auto;">
+        <p>4 years experience</p>
+      </div>
+  <div class="skill-card">
+    <h3>CSS</h3>
+    <img src="https://th.bing.com/th/id/OIP.tAvAD5lCtDJSjywplxd37QHaEo?w=290&h=181&c=7&r=0&o=5&dpr=1.3&pid=1.7" style="width: 32px; height: 32px; display: block; margin: auto;">
+    <p>4 years experience</p>
+  </div>
+  <div class="skill-card">
+    <h3>Javascript</h3>
+    <img src="https://th.bing.com/th/id/OIP.25vSXGJsvi1u3JIjcfvfNQHaEo?w=280&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" style="width: 32px; height: 32px; display: block; margin: auto;">
+    <p>4 years experience</p>
+  </div>
+  <div class="skill-card">
+    <h3>C language</h3>
+        <img src="https://th.bing.com/th/id/OIP.s2S7UEKZLhClFrZIXWm8aQHaEK?w=301&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" style="width: 32px; height: 32px; display: block; margin: auto;">
+    <p>4 years experience</p>
+  </div>
+  <div class="skill-card">
+    <h3>Python</h3>
+        <img src="https://th.bing.com/th/id/OIP.ZD8pceY3GWo0Aa6Vn-I4rQHaEK?w=304&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" style="width: 32px; height: 32px; display: block; margin: auto;">
+    <p>4 years experience</p>
+  </div>
+</div>
+<hr>
+<div class="projects">
+    <h2>Projects</h2>
+    <div class="project-card">
+    <h3>Chatbot</h3>
+    <li>Developed a secure website integrated with chatbot for an automobile client using HTML, CSS, JavaScript and IBM Watson Assistant.</li><br>
+    <hr>
+    <h3>AI Based song Recommendations</h3>
+    <li>Here our teem used google voice services.By using this it converts the given input voice into text,matches the words of emotions from the data set & accordingly it plays the songs.</li>
+    <br>
+    <hr>
+    <h3>my portfolio website using html css and JavaScript</h3>
+    <li>In this project i used my web development knowledge to create my own portfolio.This helped me to show my skills in making web development projects.</li>
+    </div>
+    <hr>
+    <h2>Recommendations</h2><br>
+<div class="Recommendations">
+    <div class="Recommendations-card">
+        <p>Ganta Pranav Reddy is fast learner. He grasps the content teached very fastly.If anyone hires him he will contribute the company growth<p>
+    </div>
+    <div class="Recommendations-card">
+        <p>Pranav Reddy's fast learning abilities are often coupled with strong problem-solving skills. He can approach challenges with creativity and efficiency, finding innovative solutions that benefit the team and the company.<p>
+    </div>
+    <div class="Recommendations-card">
+        <p>Pranav Reddy's capacity to understand complex information quickly extends to his ability to communicate it effectively to others. His clear and concise communication skills make him an asset in both team collaborations and client interactions.<p>
+    </div>
+    <div class="Recommendations-card">
+        <p>Pranav Reddy's enthusiasm for learning and contributing to the company's growth is contagious. His motivation to excel and take on new responsibilities can inspire and uplift the entire team, creating a positive and productive work environment.<p>
+    </div>
+</div>
+<form style="text-align: center;" id="myForm" onsubmit="return showBox()">
+    <h1 style="text-align: center;">Leave a Recommendation</h1>
+    <div class="form-group">
+        <label for="name">Name (Optional):</label><br>
+        <input type="text" id="name" name="name" style="width: 300px;"><br>
+        <div class="form-group"> 
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" style="width: 400px; height: 100px;"></textarea><br>
+        </div>
+        <input type="submit" value="Submit" style="width: 100px; background-color: peachpuff;">
+    </div>
+</form>
+    </div>
+    <button onclick="topFunction()" id="back-to-top-btn" title="Go to top" class="arrow-button">&#8593;</button>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;">
+                <span style="width: 40px; height: 40px; background-color: #424242; color: white; border-radius: 50%; text-align: center; font-size: 24px; line-height: 40px;">&#10004;</span>
+                <p style="text-align: center;">Thank you for your submission!</p>
+            </div>
+            <button class="ok-button">OK</button>
+        </div>        
+    </div>
+<script>
+    //Get the button
+    var mybutton = document.getElementById("back-to-top-btn");
+    
+
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+        }
+    }
+    
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+        function showBox() {
+    var modal = document.getElementById("myModal");
+    modal.style.display = "block";
+    return false; // Prevent form submission
+}
+var button = document.getElementsByClassName("ok-button")[0];
+button.onclick = function() {
+    var modal = document.getElementById("myModal");
+    modal.style.display = "none";
+}
+    </script>
+</body>
+</html>
